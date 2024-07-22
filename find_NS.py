@@ -11,7 +11,7 @@ import pandas as pd
 
 
 # Load the shapefile
-shapefile_path = r'D:\OneDrive - UNIVERSITAS INDONESIA\Inventarisasi\GIS Inventarisasi Ciliwung\LU_SEG67.shp'
+shapefile_path = r'path\to_flie.shp'
 gdf = gpd.read_file(shapefile_path)
 
 # Lists to store the points, their LU_IDs, and whether they are northernmost or southernmost
@@ -58,7 +58,7 @@ points_gdf = gpd.GeoDataFrame({'geometry': points, 'LU_ID': ids, 'Extreme_Type':
 
 
 # Save the points to a new shapefile
-output_shapefile_path = r'D:\OneDrive - UNIVERSITAS INDONESIA\Inventarisasi\GIS Inventarisasi Ciliwung\points.shp'
+output_shapefile_path = r'path_to\output\points.shp'
 points_gdf.to_file(output_shapefile_path)
 
 print(f"Northernmost and southernmost points have been exported to {output_shapefile_path}")
